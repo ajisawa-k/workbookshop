@@ -23,14 +23,21 @@ public class ProductDetail extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
+        // Set character encoding
+        request.setCharacterEncoding("UTF-8");
+        
         // Get product ID parameter
         String productId = request.getParameter("p_id");
         
         // Find product by ID
         ProductLogic productLogic = new ProductLogic();
-        Product product = productLogic.findProductById(productId);
+        Product product = null;
         
-        // Set product as request attribute
+        if (productId != null && !productId.trim().isEmpty()) {
+            product = productLogic.findProductById(productId.trim());
+        }
+        
+        // Set product as request attribute (null if not found)
         request.setAttribute("product", product);
         
         // Forward to product detail JSP

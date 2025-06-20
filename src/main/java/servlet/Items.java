@@ -27,6 +27,9 @@ public class Items extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
+        // Set character encoding
+        request.setCharacterEncoding("UTF-8");
+        
         // Get search parameter
         String searchTerm = request.getParameter("search");
         
@@ -36,7 +39,7 @@ public class Items extends HttpServlet {
         
         if (searchTerm != null && !searchTerm.trim().isEmpty()) {
             // Search for products
-            productList = productLogic.searchProducts(searchTerm);
+            productList = productLogic.searchProducts(searchTerm.trim());
         } else {
             // Get all products
             productList = productLogic.findALLProducts();
