@@ -70,7 +70,7 @@ Integer total=0;
 <% if(productList !=null){ %>
 <% for(Product product : productList){ %>
 		<tr>
-			<td><span class="center"><img src="images/item.png"><br><a href="ProductDetail?p_id=<%= product.getP_id() %>" style="color: #3c454d; text-decoration: none; font-weight: bold;"><%= product.getP_name() %></a></spans></td>
+			<td><span class="center"><img src="images/item.png"><br><a href="ProductDetail?p_id=<%= product.getP_id() %>" style="color: #3c454d; text-decoration: none; font-weight: bold;"><%= product.getP_name() %></a></span></td>
 			<td>単価：<%= product.getPrice() %>円</td>
 			<td><form method="POST" action="Items" >
                 <span class="center">購入数:<br><input type="number" name="count" min="1" max="10" value="0">
