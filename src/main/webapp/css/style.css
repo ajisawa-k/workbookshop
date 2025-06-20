@@ -204,6 +204,129 @@ span .right{
   text-align: right;
 }
 
+/* 検索バー */
+.search-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-container input[type="text"] {
+  padding: 8px 12px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-container input[type="submit"] {
+  padding: 8px 16px;
+  margin-left: 8px;
+  background: #3c454d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-container input[type="submit"]:hover {
+  background: #2a3238;
+}
+
+.search-container a {
+  margin-left: 8px;
+  color: #3c454d;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.search-container a:hover {
+  text-decoration: underline;
+}
+
+/* 商品詳細ページ */
+.product-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-info {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-details h3 {
+  color: #3c454d;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.product-details .price {
+  font-size: 28px;
+  color: #d32f2f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  margin-bottom: 30px;
+}
+
+.product-description h4 {
+  color: #3c454d;
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  line-height: 1.6;
+  color: #666;
+}
+
+.purchase-form {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.purchase-form input[type="number"] {
+  padding: 8px;
+  width: 80px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.purchase-form input[type="submit"] {
+  background: #3c454d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.purchase-form input[type="submit"]:hover {
+  background: #2a3238;
+}
+
 
 
 
@@ -259,6 +382,49 @@ textarea {
 	}
 	.nav li {
 		display: block;
+	}
+
+	/* 検索バー - モバイル対応 */
+	.search-container input[type="text"] {
+		width: 80%;
+		max-width: 280px;
+		margin-bottom: 10px;
+	}
+	
+	.search-container input[type="submit"] {
+		display: block;
+		margin: 10px auto 0 auto;
+		width: 120px;
+	}
+	
+	.search-container a {
+		display: block;
+		margin-top: 10px;
+	}
+
+	/* 商品詳細ページ - モバイル対応 */
+	.product-info {
+		display: block;
+		gap: 20px;
+	}
+	
+	.product-image,
+	.product-details {
+		flex: none;
+		width: 100%;
+	}
+	
+	.product-image {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	
+	.product-details h3 {
+		font-size: 20px;
+	}
+	
+	.product-details .price {
+		font-size: 24px;
 	}
 
 	/* menu.html - 横並び解除 */

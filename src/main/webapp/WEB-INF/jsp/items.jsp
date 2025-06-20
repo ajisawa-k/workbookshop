@@ -43,7 +43,18 @@ Integer total=0;
 	<!-- メイン -->
 	<main>
 		<h2 class="clear">商品一覧</h2>
-
+		
+		<!-- 検索バー -->
+		<div class="search-container" style="text-align: center; margin: 20px 0;">
+			<form method="GET" action="Items">
+				<input type="text" name="search" placeholder="商品名で検索..." value="<%= request.getParameter("search") != null ? request.getParameter("search") : "" %>" style="padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+				<input type="submit" value="検索" style="padding: 8px 16px; margin-left: 8px; background: #3c454d; color: white; border: none; border-radius: 4px; cursor: pointer;">
+				<% if(request.getParameter("search") != null && !request.getParameter("search").trim().isEmpty()) { %>
+				<a href="Items" style="margin-left: 8px; color: #3c454d; text-decoration: none;">検索クリア</a>
+				<% } %>
+			</form>
+		</div>
+		<!-- 検索バー ここまで -->
 
     <table class="items" align="center">
     <tr><td><span class="center"><img src="images/cart.png"></span></td>
@@ -58,7 +69,7 @@ Integer total=0;
 <% if(productList !=null){ %>
 <% for(Product product : productList){ %>
 		<tr>
-			<td><span class="center"><img src="images/item.png"><br><%= product.getP_name() %></spans></td>
+			<td><span class="center"><img src="images/item.png"><br><a href="ProductDetail?p_id=<%= product.getP_id() %>" style="color: #3c454d; text-decoration: none; font-weight: bold;"><%= product.getP_name() %></a></spans></td>
 			<td>単価：<%= product.getPrice() %>円</td>
 			<td><form method="POST" action="Items" >
                 <span class="center">購入数:<br><input type="number" name="count" min="1" max="10" value="0">
