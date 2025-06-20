@@ -3,17 +3,25 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.ProductDAO;
+
 public class ProductLogic {
     
     public List<Product> findALLProducts() {
-        // This should connect to database and return all products
-        // For now, return sample data that matches the existing compiled implementation
-        List<Product> products = new ArrayList<>();
-        products.add(new Product("1", "ノート", 120));
-        products.add(new Product("2", "ペン", 80));
-        products.add(new Product("3", "消しゴム", 60));
-        products.add(new Product("4", "定規", 150));
-        products.add(new Product("5", "ファイル", 200));
+        ProductDAO dao = new ProductDAO();
+        List<Product> products = dao.findAllProducts();
+        
+        // Fallback to sample data if database is not available
+        if (products == null || products.isEmpty()) {
+            products = new ArrayList<>();
+            products.add(new Product("1", "ノート", 120));
+            products.add(new Product("2", "ペン", 80));
+            products.add(new Product("3", "消しゴム", 60));
+            products.add(new Product("4", "定規", 150));
+            products.add(new Product("5", "ファイル", 200));
+            System.out.println("Warning: Database connection failed, using sample data");
+        }
+        
         return products;
     }
     
