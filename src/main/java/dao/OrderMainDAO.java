@@ -18,7 +18,7 @@ implements DBConfig {
         Connection conn = null;
         Integer po_id = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+            conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
             String sql = "INSERT INTO order_main(user_id,order_date,delivery_date) VALUES (?,CURRENT_DATE,null);";
             PreparedStatement pStmt = conn.prepareStatement(sql, 1);
             pStmt.setString(1, orderMain.getUser_id());
@@ -57,8 +57,8 @@ implements DBConfig {
         ArrayList<OrderMain> orderMainList = new ArrayList<OrderMain>();
         try {
             try {
-                Class.forName("org.mariadb.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+                Class.forName(DRIVER_NAME);
+                conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
                 String sql = "SELECT * FROM order_main WHERE user_id=? ORDER BY order_date DESC;";
                 PreparedStatement pStmt = conn.prepareStatement(sql);
                 pStmt.setString(1, loginUsr.getUser_id());
@@ -120,8 +120,8 @@ implements DBConfig {
         ArrayList<OrderMain> orderMainList = new ArrayList<OrderMain>();
         try {
             try {
-                Class.forName("org.mariadb.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+                Class.forName(DRIVER_NAME);
+                conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
                 String sql = "SELECT * FROM order_main WHERE po_id=?;";
                 PreparedStatement pStmt = conn.prepareStatement(sql);
                 pStmt.setInt(1, po_id);

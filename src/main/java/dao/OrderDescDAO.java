@@ -15,7 +15,7 @@ implements DBConfig {
     public OrderDesc create(OrderDesc orderDesc) {
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+            conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
             String sql = "INSERT INTO order_desc (po_id,p_id,quantity,hist_p_name,hist_price) VALUES (?,?,?,?,?);";
             PreparedStatement pStmt = conn.prepareStatement(sql);
             pStmt.setInt(1, orderDesc.getPo_id());
@@ -51,7 +51,7 @@ implements DBConfig {
         ArrayList<OrderDesc> orderDescList = new ArrayList<OrderDesc>();
         try {
             try {
-                conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+                conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
                 String sql = "SELECT * FROM order_desc WHERE po_id=?";
                 PreparedStatement pStmt = conn.prepareStatement(sql);
                 pStmt.setInt(1, po_id);

@@ -24,15 +24,15 @@ extends HttpServlet {
             try {
                 Class.forName("org.mariadb.jdbc.Driver");
                 System.out.print("Connecting to DB...");
-                conn = DriverManager.getConnection("jdbc:mariadb://localhost/mysql", "root", "");
+                conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
                 System.out.println("done.");
                 stmt = conn.createStatement();
-                String sql = "SELECT user, host from mysql.user";
+                String sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'workbookshop'";
                 ResultSet hrs = stmt.executeQuery(sql);
+                System.out.println("Tables in workbookshop database:");
                 while (hrs.next()) {
-                    String user = hrs.getString(1);
-                    String host = hrs.getString(2);
-                    System.out.println("User: " + user + " Host: " + host);
+                    String tableName = hrs.getString(1);
+                    System.out.println("Table: " + tableName);
                 }
             }
             catch (SQLException se) {
