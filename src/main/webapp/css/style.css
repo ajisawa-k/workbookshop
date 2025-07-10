@@ -9,11 +9,11 @@ html * {
 }
 body {
 	margin: 0 0 0 0;
-	background-color: #eeece9;
+	background-color: #ffffff;
 }
 .wrapper {
 	margin: 0 auto 0 auto;
-	max-width: 960px;
+	max-width: 100%;
 }
 h2 {
 	color: #3f5170;
@@ -442,4 +442,158 @@ textarea {
 *
 
 
+/* Office BASE - New Homepage Styles */
 
+/* Header Updates */
+.logo a {
+	color: #2c3e50;
+	text-decoration: none;
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.logo a:hover {
+	color: #34495e;
+}
+
+/* Main Content Sections */
+.main-content {
+	padding: 0;
+}
+
+.hero-section {
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.section-alt {
+	background-color: #f8f9fa;
+}
+
+.section-white {
+	background-color: #ffffff;
+}
+
+.section-title {
+	font-size: 2.2rem;
+	color: #2c3e50;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	line-height: 1.3;
+}
+
+.section-text {
+	font-size: 1.1rem;
+	color: #495057;
+	line-height: 1.8;
+	margin-bottom: 0;
+}
+
+/* Image Styling */
+.img-fluid {
+	border-radius: 8px !important;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Footer Updates */
+.footer {
+	background: #2c3e50;
+	color: #ffffff;
+	text-align: center;
+	padding: 40px 15px 20px 15px;
+	margin-top: 50px;
+	background-image: none;
+}
+
+.footer p {
+	margin: 0;
+	font-size: 14px;
+}
+
+/* Navigation Updates */
+.nav {
+	background: #ffffff;
+	border-bottom: 2px solid #e9ecef;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+	background-image: none;
+	background-color: transparent;
+	padding: 15px 20px;
+	margin: 0;
+	text-align: center;
+}
+
+.nav a:link,
+.nav a:visited {
+	color: #2c3e50;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.nav a:hover {
+	color: #3498db;
+}
+
+.nav a:active {
+	color: #2980b9;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+	.section-title {
+		font-size: 1.8rem;
+	}
+	
+	.section-text {
+		font-size: 1rem;
+	}
+	
+	.logo a {
+		font-size: 24px;
+	}
+	
+	.nav ul {
+		padding: 10px;
+	}
+	
+	.nav li {
+		display: block;
+		margin: 5px 0;
+	}
+	
+	.py-5 {
+		padding-top: 3rem !important;
+		padding-bottom: 3rem !important;
+	}
+}
+
+/* Animation Enhancements */
+[data-aos] {
+	pointer-events: none;
+}
+
+.aos-animate {
+	pointer-events: auto;
+}
+
+/* Additional spacing and layout improvements */
+section {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1200px;
+}
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
