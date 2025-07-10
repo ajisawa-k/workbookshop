@@ -29,14 +29,14 @@ Integer counter=1;
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Workbook shopへようこそ</title>
+    <title>Office BASE - すべてのオフィスに、最高の効率を。</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="wrapper">
 	<!-- ヘッダー -->
 	<header class="header">
-		<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Workbook Shop"></a></h1>
+		<h1 class="logo"><a href="index.html">Office BASE</a></h1>
 		<nav class="nav">
 			<ul>
 <jsp:include page="/WEB-INF/jsp/_inc_navi.jsp"></jsp:include>
@@ -88,7 +88,7 @@ Integer counter=1;
 	<!-- メイン ここまで -->
 	<!-- フッター -->
 	<footer class="footer">
-        <p>&copy;Copyright Workbook Shop. All rights reserved.</p>
+        <p>&copy;Copyright Office BASE. All rights reserved.</p>
 	</footer>
 	<!-- フッター ここまで -->
 </div>
