@@ -1,8 +1,8 @@
-# Workbook Shop
+# Office BASE
 
 ## 概要
 
-Workbook Shopは、事務用品・オフィス用品のオンライン通販サイトです。オフィス家具や文房具、プリンタトナーなどの事務用品を取り扱い、お客様に便利なショッピング体験を提供します。
+Office BASEは、事務用品・オフィス用品のオンライン通販サイトです。オフィス家具や文房具、プリンタトナーなどの事務用品を取り扱い、お客様に便利なショッピング体験を提供します。
 
 ## 主な機能
 
@@ -70,7 +70,7 @@ Workbook Shopは、事務用品・オフィス用品のオンライン通販サ�
 
 6. **アプリケーションの起動**
    - Tomcatサーバーを起動
-   - ブラウザで `http://localhost:8080/WorkbookShop/` にアクセス
+   - ブラウザで `http://localhost:8080/OfficeBASE/` にアクセス
 
 ## 使用方法
 
@@ -115,7 +115,7 @@ workbookshop/
 
 ## 店舗情報
 
-**販売業者名**: Workbook shop（事務用品、オフィス用品の通販サイト）  
+**販売業者名**: Office BASE（事務用品、オフィス用品の通販サイト）  
 **所在地**: 〒101-0054 東京都千代田区神田錦町1-19-1 神田橋パークビル5F  
 **TEL**: 03-5259-0070  
 **FAX**: 03-5259-0075  
@@ -125,7 +125,7 @@ workbookshop/
 
 ## ライセンス
 
-Copyright Workbook Shop. All rights reserved.
+Copyright Office BASE. All rights reserved.
 
 ## 貢献
 

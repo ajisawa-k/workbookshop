@@ -1,4 +1,4 @@
-# Workbookshop Database Configuration Summary
+# Office BASE Database Configuration Summary
 
 ## Issue #19 Resolution
 
