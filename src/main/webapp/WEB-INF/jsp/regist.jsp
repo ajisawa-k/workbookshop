@@ -30,7 +30,7 @@ GenPrefectureSel genPrefectureSel= new GenPrefectureSel();
 <div class="wrapper">
 	<!-- ヘッダー -->
 	<header class="header">
-		<h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Office BASE"></a></h1>
+		<h1 class="logo"><a href="index.html">Office BASE</a></h1>
 		<nav class="nav">
 			<ul>
 <jsp:include page="/WEB-INF/jsp/_inc_navi.jsp"></jsp:include>
