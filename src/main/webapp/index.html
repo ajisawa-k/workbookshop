@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Workbook shopへようこそ</title>
+    <title>Office BASE - すべてのオフィスに、最高の効率を。</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="wrapper">
       <!-- ヘッダー -->
       <header class="header">
-        <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="KUJIRA Cafe"></a></h1>
+        <h1 class="logo"><a href="index.html">Office BASE</a></h1>
         <nav class="nav">
           <ul>
 		            <li><a href="index.html">ホーム</a></li>
@@ -24,20 +26,117 @@
         </nav>
       </header>
       <!-- ヘッダー ここまで -->
-      <!-- メイン -->
-      <div class="keyvisual"> <img src="images/keyvisual.jpg" alt=""> </div>
-      <main>
-        <h2 id="news">News</h2>
-        <p class="news-item">4月29日（月）取り扱い商品にキャビネット大を追加しました。価格は、50,000円です。</p>
-        <p class="news-item">3月20日（水）取り扱い商品にキャビネット中を追加しました。価格は、40,000円です。</p>
-        <p class="news-item">2月12日（火）取り扱い商品にキャビネット小を追加しました。価格は、30,000円です。</p>
+      
+      <!-- メイン コンテンツ -->
+      <main class="main-content">
+        <!-- セクション① -->
+        <section class="hero-section py-5" data-aos="fade-up">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                <img src="images/top1.jpg" alt="オフィス効率化" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                <h2 class="section-title">すべてのオフィスに、最高の効率を。</h2>
+                <p class="section-text">
+                  「ちょっと欲しい」が、すぐ届く。<br>
+                  Office BASEは、オフィス家具や事務用品をスムーズに調達できる、法人・個人事業主向け通販サイトです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション② -->
+        <section class="section-alt py-5" data-aos="fade-up">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
+                <img src="images/top2.jpg" alt="スピード配送" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="400">
+                <h2 class="section-title">最短当日または翌日配送。</h2>
+                <p class="section-text">
+                  急な備品不足にも対応。<br>
+                  お客様の「困った」に応えるため、当日または翌日のスピード配送を実現しました。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション③ -->
+        <section class="section-white py-5" data-aos="fade-up">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                <img src="images/top3.jpg" alt="無料サービス" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                <h2 class="section-title">送料も、年会費も、完全無料。</h2>
+                <p class="section-text">
+                  複雑な条件はありません。<br>
+                  初めての方もすぐに使える、明朗でわかりやすい価格設定です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション④ -->
+        <section class="section-alt py-5" data-aos="fade-up">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="200">
+                <img src="images/top4.jpg" alt="豊富な商品" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="400">
+                <h2 class="section-title">オフィスに必要なもの、すべて揃います。</h2>
+                <p class="section-text">
+                  プリンタトナーや筆記具から、デスク・チェアまで。<br>
+                  1つのサイトでまとめて揃えられるのが、Office BASEの強みです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション⑤ -->
+        <section class="section-white py-5" data-aos="fade-up">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                <img src="images/top5.jpg" alt="確かな品質" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+                <h2 class="section-title">オフィスを支える、確かな品質。</h2>
+                <p class="section-text">
+                  毎日使うものだからこそ、品質に妥協しません。<br>
+                  選び抜かれた商品と丁寧な対応で、お客様の業務をしっかり支えます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <!-- メイン ここまで -->
+      
       <!-- フッター -->
       <footer class="footer">
-        <p>&copy;Copyright Workbook Shop. All rights reserved.</p>
+        <p>&copy;Copyright Office BASE. All rights reserved.</p>
       </footer>
-      <!-- フッター ここまで --> </div>
+      <!-- フッター ここまで --> 
+    </div>
 
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    </script>
   </body>
 </html>
