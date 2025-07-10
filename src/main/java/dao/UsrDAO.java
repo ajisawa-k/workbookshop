@@ -19,8 +19,8 @@ implements DBConfig {
         ArrayList<Usr> usrList = new ArrayList<Usr>();
         try {
             try {
-                Class.forName("org.mariadb.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+                Class.forName(DRIVER_NAME);
+                conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
                 String sql = "SELECT * FROM usr WHERE user_id=? and password=? ;";
                 PreparedStatement pStmt = conn.prepareStatement(sql);
                 pStmt.setString(1, usr.getUser_id());
@@ -94,8 +94,8 @@ implements DBConfig {
         newID = date.getMonthValue() < 10 ? "C0" + date.getMonthValue() : "C" + date.getMonthValue();
         Random random = new Random();
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+            Class.forName(DRIVER_NAME);
+            conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
             do {
                 int i = 0;
                 while (i < 4) {
@@ -127,8 +127,8 @@ implements DBConfig {
         Connection conn = null;
         String errorStr = "";
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost/workbookshop", "root", "insource.2015it");
+            Class.forName(DRIVER_NAME);
+            conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
             String sql = "INSERT INTO usr(user_id,password,l_name,f_name,l_name_kana,f_name_kana,prefecture,city,o_address,tel,email) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement pStmt = conn.prepareStatement(sql);
             pStmt.setString(1, usr.getUser_id());
