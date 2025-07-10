@@ -28,7 +28,7 @@ String errorMsg = (String)request.getAttribute("errorMsg");
 	<main>
 		<h2 class="clear">会員ログイン</h2>
         <% if(loginUsr ==null){ %>
-		<form method="POST" action="/WorkbookShop/Login">
+		<form method="POST" action="/OfficeBASE/Login">
 
 			<table class="login" align="center">
 			<tr>
