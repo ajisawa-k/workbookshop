@@ -1,1 +1,8 @@
 /build/
+*.class
+/bin/
+.metadata/
+.settings/
+.loadpath
+.project
+.classpath
