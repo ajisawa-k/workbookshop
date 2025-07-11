@@ -10,6 +10,7 @@ html * {
 body {
 	margin: 0 0 0 0;
 	background-color: #ffffff;
+	padding-top: 80px; /* Add padding for fixed navigation */
 }
 .wrapper {
 	margin: 0 auto 0 auto;
@@ -381,12 +382,22 @@ textarea {
 	}
 	.nav {
 		background-color: #dfddda;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
 	}
 	.nav ul {
 		text-align: center;
 	}
 	.nav li {
 		display: block;
+	}
+	
+	/* Mobile padding adjustment */
+	body {
+		padding-top: 120px; /* Increased padding for mobile */
 	}
 
 	/* 検索バー - モバイル対応 */
@@ -526,6 +537,11 @@ textarea {
 	background: #ffffff;
 	border-bottom: 2px solid #e9ecef;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
 }
 
 .nav ul {
